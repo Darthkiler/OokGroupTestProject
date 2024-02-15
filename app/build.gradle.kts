@@ -87,4 +87,10 @@ dependencies {
     // Hilt
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-android-compiler:2.50")
+
+    // Test
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("io.mockk:mockk:1.13.7")
+    testImplementation("com.google.truth:truth:1.1.5")
+
 }
