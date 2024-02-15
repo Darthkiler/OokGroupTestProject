@@ -3,6 +3,7 @@ package com.darthkiler.ookgrouptestproject.ui.screen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.darthkiler.ookgrouptestproject.domain.model.PostcardModel
 import com.darthkiler.ookgrouptestproject.domain.usecase.GetPostcardsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,6 +23,7 @@ class PostcardsListScreenViewModel @Inject constructor(
 
     init {
         getPostcardsUseCase()
+            .cachedIn(viewModelScope)
             .onEach { data ->
                 _postcardsListState.update { data }
             }.launchIn(viewModelScope)
