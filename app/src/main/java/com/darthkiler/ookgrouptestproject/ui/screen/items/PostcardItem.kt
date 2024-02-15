@@ -45,7 +45,7 @@ fun PostcardItem(
                 CircularProgressIndicator(
                     modifier = Modifier
                         .size(27.dp)
-                        .align(Alignment.Center),
+                        .align(Alignment.Center)
                 )
             }
         }

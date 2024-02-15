@@ -8,8 +8,7 @@ data class PostcardsResponseBody(
     @SerialName("status")
     val status: String?,
     @SerialName("data")
-    val data: Data,
-
+    val data: Data
 
 ) {
     @Serializable
@@ -20,7 +19,7 @@ data class PostcardsResponseBody(
         @SerialName("totalPostcards")
         val totalPostcards: Int?,
         @SerialName("totalPages")
-        val totalPages: Int?,
+        val totalPages: Int?
     ) {
         @Serializable
         data class Postcard(

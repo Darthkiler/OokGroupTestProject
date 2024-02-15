@@ -19,7 +19,7 @@ interface PostcardsNetworkRepository {
 
 internal class PostcardsNetworkRepositoryImpl @Inject constructor(
     private val postcardsPagingSource: PostcardsPagingSource
-): PostcardsNetworkRepository {
+) : PostcardsNetworkRepository {
     override fun getPostcards(): Flow<PagingData<PostcardsResponseBody.Data.Postcard>> {
         return Pager(
             config = PagingConfig(

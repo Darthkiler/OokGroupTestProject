@@ -4,6 +4,7 @@ plugins {
     id("com.google.dagger.hilt.android")
     kotlin("plugin.serialization")
     kotlin("kapt")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
@@ -86,5 +87,4 @@ dependencies {
     // Hilt
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-android-compiler:2.50")
-
 }

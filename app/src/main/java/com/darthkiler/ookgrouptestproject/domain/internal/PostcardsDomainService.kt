@@ -27,7 +27,6 @@ internal class PostcardsDomainServiceImpl @Inject constructor(
             }
         }
     }
-
 }
 
 @Module

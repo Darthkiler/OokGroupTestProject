@@ -24,7 +24,7 @@ fun PostcardsListScreen(
 
     LazyVerticalGrid(
         modifier = Modifier.fillMaxWidth(),
-        columns = GridCells.Fixed(count = 2),
+        columns = GridCells.Fixed(count = 2)
     ) {
         items(resultsPagingItems.itemCount) { index ->
             resultsPagingItems[index]?.let {
@@ -58,7 +58,8 @@ fun PostcardsListScreen(
                     ) {
                         ErrorMessage(
                             message = error.error.localizedMessage!!,
-                            onClickRetry = { retry() })
+                            onClickRetry = { retry() }
+                        )
                     }
                 }
 
@@ -79,7 +80,8 @@ fun PostcardsListScreen(
                     ) {
                         ErrorMessage(
                             message = error.error.localizedMessage!!,
-                            onClickRetry = { retry() })
+                            onClickRetry = { retry() }
+                        )
                     }
                 }
             }

@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class PostcardsPagingSource @Inject constructor(
     private val postcardsApi: PostcardsApi
-): PagingSource<Int, PostcardsResponseBody.Data.Postcard>() {
+) : PagingSource<Int, PostcardsResponseBody.Data.Postcard>() {
     override fun getRefreshKey(state: PagingState<Int, PostcardsResponseBody.Data.Postcard>): Int? {
         return state.anchorPosition
     }
@@ -23,7 +23,7 @@ class PostcardsPagingSource @Inject constructor(
                 ),
                 queryParams = mapOf(
                     RequestConstants.LIMIT to RequestConstants.ITEMS_PER_PAGE.toString(),
-                    PAGE to currentPage.toString(),
+                    PAGE to currentPage.toString()
                 )
             )
             LoadResult.Page(
@@ -39,5 +39,4 @@ class PostcardsPagingSource @Inject constructor(
             LoadResult.Error(e)
         }
     }
-
 }

@@ -3,7 +3,6 @@ package com.darthkiler.ookgrouptestproject.ui.screen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
-import androidx.paging.cachedIn
 import com.darthkiler.ookgrouptestproject.domain.model.PostcardModel
 import com.darthkiler.ookgrouptestproject.domain.usecase.GetPostcardsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PostcardsListScreenViewModel @Inject constructor(
     private val getPostcardsUseCase: GetPostcardsUseCase
-): ViewModel() {
+) : ViewModel() {
 
     private val _postcardsListState = MutableStateFlow(PagingData.empty<PostcardModel>())
     val postcardsListState get() = _postcardsListState

@@ -14,10 +14,8 @@ import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
-
 private const val CONNECT_TIMEOUT = 30L
 private const val READ_TIMEOUT = 40L
-
 
 @Module
 @InstallIn(SingletonComponent::class)
